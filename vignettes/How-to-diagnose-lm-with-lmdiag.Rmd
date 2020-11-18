@@ -1,5 +1,5 @@
 ---
-title: "How-to-diagnose-lm-with-lmdiag"
+title: "How to diagnose lm with lmdiag"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{How-to-diagnose-lm-with-lmdiag}
