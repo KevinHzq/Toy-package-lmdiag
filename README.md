@@ -17,7 +17,7 @@ You can install the released version of lmdiag from
 [Github](https://github.com/) with:
 
 ``` r
-devtools::install_github("KevinHzq/lmdiag", build_vignettes = TRUE)
+devtools::install_github("KevinHzq/lmdiag", build_vignettes = TRUE, ref = "v0.1.1")
 ```
 
 ## Example
