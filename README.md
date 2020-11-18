@@ -14,10 +14,10 @@ homogeneity using Breusch-Pagan test.
 ## Installation
 
 You can install the released version of lmdiag from
-[CRAN](https://CRAN.R-project.org) with:
+[Github](https://github.com/) with:
 
 ``` r
-install.packages("lmdiag")
+devtools:install_github("KevinHzq/lmdiag", build_vignettes = TRUE)
 ```
 
 ## Example
