@@ -1,0 +1,47 @@
+---
+title: "How-to-diagnose-lm-with-lmdiag"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{How-to-diagnose-lm-with-lmdiag}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(lmdiag)
+```
+
+Let's fit a simple lm model first.
+
+```{r}
+lm_life_gdp <- lm(lifeExp ~ gdpPercap, data = gapminder::gapminder)
+```
+
+Then we use `lm_diag` to test the residuals' normality and equal variances assumptions:
+
+```{r}
+lm_diag(lm_life_gdp)
+```
+The result "fail" indicates at least one of the assumptions failed.   
+
+We can check which assumption failed by showing the p-values of both test:
+
+```{r}
+lm_diag(lm_life_gdp, output.p = TRUE)
+```
+
+In this case, both tests rejected the null hypothesis.
+
+Furthermore, we can change the alpha level of the tests (this works only for text output):
+
+```{r}
+lm_diag(lm_life_gdp, alpha = 0.1)
+```
+

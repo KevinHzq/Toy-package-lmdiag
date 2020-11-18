@@ -1,0 +1,78 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# lmdiag
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+The goal of lmdiag is to diagnose linear model (lm) assumptions by
+testing model residuals for normality using Shapiro-Wilk test, and for
+homogeneity using Breusch-Pagan test.
+
+## Installation
+
+You can install the released version of lmdiag from
+[CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("lmdiag")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+``` r
+library(lmdiag)
+## basic example code
+lm_model <- lm(lifeExp ~ gdpPercap, data = gapminder::gapminder)
+lm_diag(lm_model)
+#> [1] "fail"
+```
+
+## Development Explanation
+
+1.  Create package folder locally using
+    code:`create_package("~/lmdiag")`
+
+2.  Enable Git for version control: `use_git()`
+
+3.  Create script file for the lm\_diag function: `use_r("lm_diag")`,
+    and write the function (from Assignment 1). Then, insert and fill
+    roxygen skeleton.
+
+4.  Create this readme file: `use_readme_rmd()`, fill the template, and
+    start documenting the development process.
+
+5.  Load the function by `load_all`, and manually test the function
+    using the example above. Also, check the function documentation with
+    `?lm_diag` (edited the script file to improve the documentation
+    after checking).
+
+6.  Check the package for errors using `check()`. Errors found as the
+    lm\_diag function uses two functions from the ‘stats’ package and
+    one from the ‘car’ package.
+
+7.  Fix the errors by importing those package: `use_package("stats")`,
+    `use_package("car")`, and put gapminder (for testing) as suggest
+    package: `use_package("gapminder", "suggest")`. Then check for error
+    again.
+
+8.  Setup test file by `use_test()`, and write the test (from previous
+    assignment) with ‘testthat’ package. Then `check()` for error again.
+
+9.  Edit the “DESCRIPTION” file, and set license by
+    `use_mit_license("Kevin Hu")`. Update documentation using
+    `document()`
+
+10. Create a vignette with
+    `use_vignette("How-to-diagnose-lm-with-lmdiag")`, write a short demo
+    of the package, then build the vignette by `build_vignettes()`
+
+11. Build Readme by `build_readme()`. `check()` for error again.
+    `install()` the package and manually check the functionality and
+    documentations once more.
+
+12. Commit the changes and push the files to github.
