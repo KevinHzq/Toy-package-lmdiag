@@ -2,7 +2,7 @@
 title: "How to diagnose lm with lmdiag"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{How-to-diagnose-lm-with-lmdiag}
+  %\VignetteIndexEntry{How to diagnose lm with lmdiag}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
